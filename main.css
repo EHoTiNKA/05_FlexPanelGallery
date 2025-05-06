@@ -1,0 +1,105 @@
+html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+    background: #6B0F9C;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    transition:
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel1 {
+    background-image: url(https://yandex-images.clstorage.net/5xS2Kh197/59197bv8dV/Em8CtZJ8pqMkf2FRPe_0FVOzjmLR4mds_ZYVIjLWQrI0fRHnLyx0KqpHnHVanNqdrx98XJsQY5ebCt1p673dB1I9R-3TIuGjIWsqW3H1-AVG_5MhxKB-aPrPGXJeu2aVExdr01EIDlfqEJByD9SX3rlyQEmBShjyzCmoRv_VhlIiVD24h03BiSxqJk8b-fs1Y_O2U9CHRSPSmUYORpFMoRoqVcxQCTBU2h-3Zxvo9e66VXUKqFIy9MoLvU_P9IZDDG0ik7Vq65c3Wz9vLff_A03Kj0DGrlwU0ZxvNGWlVbshImzubgYAfdArrWIg5v34tHhTH7pgBeXILJ1R4Ni5fzNXF422Y9igCXU_URPi5D5v761L0L59NNK0bBhUt16APCBq11EZM3PeMoh5GsD2-LhgfSqwVR3v_S-DVc3HunsgbRK_l2n8qA1tO3ItyN4IXtqJa868XgPbm0YoSKpShDYCQ_F7BTV0_wezfQTl0-2_QEUFrmQX9ewkgVrD3a9yPFw8hqhA8rQtfT5xO8rYH23qr2jOiGQr3rtEBE-9Qq4VDFL3fgYqcuoEhHII7e_BrlVNGY1WMOL7Bp9Gw_upWj53LrqLfPKcBG4CRTvR4glay6RP7oN6CdKeRjtGtFWAFw5lwFE1Bm_YA5llO-rJ54dmdCW4ThrY9wWnUdPUsW4CYQGQmFrhhCR4O3weyeAeROSnZvSMVxnDglwHZK1hjSMtQ_ZRHShI9QmsYznv0_W_SWYavHoD58EvnlXl3pFiCH8_patm7bwESyBuEOXaAEzKl0HArGcq5LZaCUawYZcFAWfXaSs0aMEmq1Eh2PvEvVtrPrpDG8nZLblC5sCKbDN0N6yMf-26E0U3fw3U5Al997hB86J0Pd-aWDN5g3KNFgxK0k8kE1LGMpFZB_zaxoFuViKbeyPj4xCeW-XVpWYgYD-llH_DuxF1HXIy6tYGaMWPTvOfQzTsongHVbA);
+}
+
+.panel2 {
+    background-image: url(https://i.pinimg.com/originals/66/9a/4f/669a4f7964067da9f5d3e9aa017f063d.jpg);
+}
+
+.panel3 {
+    background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+}
+
+.panel4 {
+    background-image: url(https://wallpapers.com/images/hd/toyota-86-b2o8dskjt6y7vysr.jpg);
+}
+
+.panel5 {
+    background-image: url(https://avatars.mds.yandex.net/i?id=24b8d6025503ba57bef8e54b161e915c_l-4798077-images-thumbs&ref=rim&n=13&w=2500&h=1875);
+}
+
+/* Flex Children */
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child {
+    transform: translateY(-100%);
+}
+
+.panel.open-active > *:first-child {
+    transform: translateY(0);
+}
+
+.panel > *:last-child {
+    transform: translateY(100%);
+}
+
+.panel.open-active > *:last-child {
+    transform: translateY(0);
+}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+    font-size: 4em;
+}
+
+.panel.open {
+    flex: 3;
+    font-size: 40px;
+}
